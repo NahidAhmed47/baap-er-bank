@@ -1,8 +1,11 @@
 // find input amount
 document.getElementById('btn-deposit').addEventListener('click', function(){
+    // input area
     const inputField = document.getElementById('input-deposit');
     const inputAmountString = inputField.value;
     const inputAmount = parseFloat(inputAmountString);
+
+    // deposit area
     const previousDepositTotal = document.getElementById('deposit-total');
     const depositTotalString = previousDepositTotal.innerText;
     const depositTotal = parseFloat(depositTotalString);
@@ -14,6 +17,6 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     const balanceString = previousBalance.innerText;
     const balance = parseFloat(balanceString);
     const currentBalance = balance + inputAmount;
-    previousBalance.innerText = currentBalance;
+    previousBalance.innerText = currentBalance.toFixed(2);
     inputField.value = '';
 })
