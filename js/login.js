@@ -5,6 +5,6 @@ document.getElementById('btn-login').addEventListener('click', function(){
         document.getElementById('a').setAttribute('href', 'bank.html');
     }
     else{
-        alert('invalid user');
+        alert('incorrect Email or Password');
     }
 })
